@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Current weather CARD -->
+    <div class="container">
+      <div class="location-timezone"><p>-</p></div>
+      <div class="notification"><p>-</p></div>
+      <div class="weather-container">
+        <div class="weather-icon"><img src="icons/unknown.png" /></div>
+        <div class="temperature-value">
+          <p>-</p>
+          <span> °</span><span id="degree">C</span>
+        </div>
+      </div>
+      <div class="temperature-description"><p>-</p></div>
+    </div>
+
+    <section class="main">
+      <div class="container1">
+        <form>
+          <input
+            type="text"
+            placeholder="Search for a city"
+            id="input"
+            autofocus
+          />
+          <button type="submit" id="button">Submit</button>
+          <button type="submit" id="button" class="clear">Clear</button>
+          <span class="msg"></span>
+        </form>
+      </div>
+
+      <div class="ajax-section">
+        <ul class="cities" id="cities">
+          <!-- <li class="city uncheck">
+            <div class="container">
+              <h2 class="location-timezone1" data-name="${name},${country}">
+                <span>Ambala,</span>
+                <sup>In</sup>
+              </h2>
+              <div class="weather-container1">
+                <div class="weather-icon1">
+                  <img src="icons/01d.png" alt="" />
+                </div>
+                <div class="temperature-value">
+                  <p>36</p>
+                  <span> °</span><span id="degree">C</span>
+                </div>
+                <div class="temperature-description1">
+                  <p>Baarish</p>
+                  <img class="watchlist add" src="icons/add.png" />
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="city uncheck">
+            <div class="container">
+              <h2 class="location-timezone1" data-name="${name},${country}">
+                <span>Mohali,</span>
+                <sup>In</sup>
+              </h2>
+              <div class="weather-container1">
+                <div class="weather-icon1">
+                  <img src="icons/01n.png" alt="" />
+                </div>
+                <div class="temperature-value">
+                  <p>27</p>
+                  <span> °</span><span id="degree">C</span>
+                </div>
+                <div class="temperature-description1">
+                  <p>Aandhi</p>
+                  <img class="watchlist add" src="icons/add.png" />
+                </div>
+              </div>
+            </div>
+          </li> -->
+        </ul>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- USE ASYNC/AWAIT INSTEAD OF .THEN() -->
