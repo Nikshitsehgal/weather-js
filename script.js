@@ -21,7 +21,11 @@ const setPosition = (position) => {
   // const proxy = "https://cors-anywhere.herokuapp.com/";
   const api = `api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${key}`;
 
-  fetch(api)
+  fetch(api, {
+    headers: {
+      Accept: "application/vnd.github.v3+json",
+    },
+  })
     .then((response) => {
       return response.json();
     })
@@ -122,7 +126,11 @@ submit.addEventListener("click", (event) => {
   // const proxy = "https://cors-anywhere.herokuapp.com/";
   const api = `api.openweathermap.org/data/2.5/weather?q=${input}&appid=${key}`;
 
-  fetch(api)
+  fetch(api, {
+    headers: {
+      Accept: "application/vnd.github.v3+json",
+    },
+  })
     .then((response) => {
       return response.json();
     })
