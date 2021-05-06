@@ -18,8 +18,8 @@ const showError = (error) => {
 const setPosition = (position) => {
   long = position.coords.longitude;
   lat = position.coords.latitude;
-  const proxy = "https://cors-anywhere.herokuapp.com/";
-  const api = `${proxy}api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${key}`;
+  // const proxy = "https://cors-anywhere.herokuapp.com/";
+  const api = `api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${key}`;
 
   fetch(api)
     .then((response) => {
@@ -119,8 +119,8 @@ submit.addEventListener("click", (event) => {
     }
   }
 
-  const proxy = "https://cors-anywhere.herokuapp.com/";
-  const api = `${proxy}api.openweathermap.org/data/2.5/weather?q=${input}&appid=${key}`;
+  // const proxy = "https://cors-anywhere.herokuapp.com/";
+  const api = `api.openweathermap.org/data/2.5/weather?q=${input}&appid=${key}`;
 
   fetch(api)
     .then((response) => {
