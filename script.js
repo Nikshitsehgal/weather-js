@@ -7,6 +7,7 @@ let tempDegree = document.querySelector(".temperature-value p");
 const msg = document.querySelector(".main .msg");
 let form = document.querySelector(".main form");
 let list = document.querySelector("#cities");
+const key = "d91f6bd2891f2a775352b5ce4e0f393c";
 
 // CURRENT LOCATION WEATHER JS
 const showError = (error) => {
@@ -18,7 +19,7 @@ const setPosition = (position) => {
   long = position.coords.longitude;
   lat = position.coords.latitude;
   const proxy = "https://cors-anywhere.herokuapp.com/";
-  const api = `${proxy}api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${{secret.API_KEY}}`;
+  const api = `${proxy}api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${key}`;
 
   fetch(api)
     .then((response) => {
@@ -119,7 +120,7 @@ submit.addEventListener("click", (event) => {
   }
 
   const proxy = "https://cors-anywhere.herokuapp.com/";
-  const api = `${proxy}api.openweathermap.org/data/2.5/weather?q=${input}&appid=${{secret.API_KEY}}`;
+  const api = `${proxy}api.openweathermap.org/data/2.5/weather?q=${input}&appid=${key}`;
 
   fetch(api)
     .then((response) => {
