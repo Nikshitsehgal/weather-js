@@ -115,6 +115,26 @@ body {
   font-size: 1.5em;
 }
 
+.temperature-value1 {
+  width: 250px;
+  height: 60px;
+  display: inline-block;
+  text-align: center;
+}
+
+.temperature-value1 p {
+  padding: 0;
+  margin: 0;
+  color: #293251;
+  font-size: 3em;
+  cursor: pointer;
+}
+
+.temperature-value1 span {
+  color: #293251;
+  font-size: 1.5em;
+}
+
 .temperature-description p {
   padding: 8px;
   margin: 2px;
@@ -248,6 +268,7 @@ button {
 
   .container1 input,
   button {
+    display: inline;
     width: 80%;
   }
 
