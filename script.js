@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 let long;
 let lat;
 let locationTimezone = document.querySelector(".location-timezone p");
@@ -7,7 +9,7 @@ let tempDegree = document.querySelector(".temperature-value p");
 const msg = document.querySelector(".main .msg");
 let form = document.querySelector(".main form");
 let list = document.querySelector("#cities");
-const key = "d91f6bd2891f2a775352b5ce4e0f393c";
+const apikey = process.env.API_KEY;
 
 // CURRENT LOCATION WEATHER JS
 const showError = (error) => {
@@ -18,14 +20,10 @@ const showError = (error) => {
 const setPosition = (position) => {
   long = position.coords.longitude;
   lat = position.coords.latitude;
-  // const proxy = "https://cors-anywhere.herokuapp.com/";
-  const api = `api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${key}`;
+  const proxy = "https://cors-anywhere.herokuapp.com/";
+  const api = `${proxy}api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apikey}`;
 
-  fetch(api, {
-    headers: {
-      Accept: "application/vnd.github.v3+json",
-    },
-  })
+  fetch(api)
     .then((response) => {
       return response.json();
     })
@@ -123,14 +121,10 @@ submit.addEventListener("click", (event) => {
     }
   }
 
-  // const proxy = "https://cors-anywhere.herokuapp.com/";
-  const api = `api.openweathermap.org/data/2.5/weather?q=${input}&appid=${key}`;
+  const proxy = "https://cors-anywhere.herokuapp.com/";
+  const api = `${proxy}api.openweathermap.org/data/2.5/weather?q=${input}&appid=${apikey}`;
 
-  fetch(api, {
-    headers: {
-      Accept: "application/vnd.github.v3+json",
-    },
-  })
+  fetch(api)
     .then((response) => {
       return response.json();
     })

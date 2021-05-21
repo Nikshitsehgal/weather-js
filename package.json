@@ -1,0 +1,24 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "This is a weather forecast website created using JS.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nikshitsehgal/weather-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nikshitsehgal/weather-js/issues"
+  },
+  "homepage": "https://github.com/Nikshitsehgal/weather-js/index.html",
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "dotenv": "^9.0.2"
+  }
+}
